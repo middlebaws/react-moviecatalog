@@ -36,18 +36,19 @@ export default function SearchMovies(){
     return (
         <>
             <form className="form" onSubmit={searchMovies}>
-                <label className="label" htmlFor="query">Movie Name</label>
+                <label className="label" htmlFor="query">Nome do Filme</label>
                 <input className="input" type="text" name="query"
                     placeholder="Ex: Jurassic Park, Pokemon 2000, Transformers e etc..."
                     value={query} onChange={(e) => setQuery(e.target.value)}
                     />
-                <button className="button" type="submit">Search</button>
+                <button className="button" type="submit">Procurar  🔍  
+                </button>
             </form>
             <div className="card-list">
                 {movies.filter(movie => movie.poster_path).map(movie => (
-                    <MovieCard movie={movie} key={movie.id}></MovieCard>
+                   <MovieCard movie={movie} key={movie.id} />
                 ))}
-            </div>    
+            </div>     
         </>
     )
 }

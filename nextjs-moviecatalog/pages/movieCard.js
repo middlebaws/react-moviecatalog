@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function MovieCard({movie}){
-
     return (
          <div className="card" key={movie.id} >
             <img className="card-image"
